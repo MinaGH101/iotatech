@@ -14,11 +14,11 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
-							<h1 class="headingIV fwEbold playfair mb-4">Papers</h1>
+							<h1 class="headingIV fwEbold playfair mb-4">مقالات</h1>
 							<ul class="list-unstyled breadCrumbs d-flex justify-content-center">
-								<li class="mr-sm-2 mr-1"><a href="{% url 'home:home' %}">Home</a></li>
+								<li class="mr-sm-2 mr-1"><a href="{% url 'home:home' %}">خانه</a></li>
 								<li class="mr-sm-2 mr-1">/</li>
-								<li class="mr-sm-2 mr-1"><a href="{% url 'home:home' %}#papers">Papers</a></li>
+								<li class="mr-sm-2 mr-1"><a href="{% url 'home:home' %}#papers">مقالات</a></li>
 								<li class="mr-sm-2 mr-1">/</li>
 								<li class="active">{{ post.title }}</li>
 							</ul>
@@ -31,17 +31,17 @@
 				<div class="row border-bottom mb-9">
 					<div class="col-12 col-lg-9 order-lg-3">
 						<!-- newsBlogColumn -->
-						<div class="newsBlogColumn mb-9">
+						<div class="newsBlogColumn mb-9" style="font-size:16px; direction: rtl; text-align: justify; text-justify: inter-word;">
 							{% if post.img %}
 							<div class="imgHolder mb-6">
 								<img src="{{ post.img.url }}" alt="image description" class="img-fluid post">
 							</div>
 							{% endif %}
 							<div class="textHolder d-flex align-items-start mb-1">
-								<time class="time text-center text-uppercase py-sm-3 py-1 px-1" datetime="2019-02-03 20:00"> <strong class="fwEbold d-block mb-1">20</strong> Sep</time>
+								<time class="time text-center text-uppercase py-sm-3 py-1 px-1 ml-5" datetime="2019-02-03 20:00"> <strong class="fwEbold d-block mb-1">20</strong> Sep</time>
 								<div class="alignLeft pl-6 w-100">
 									<h2 class="headingV fwEbold mb-2">{{ post.title }}</h2>
-									<span class="postBy d-block pb-6 mb-3">Post by: {{ post.writer }}</span>
+									<span class="postBy d-block pb-6 mb-3">نویسنده: {{ post.writer }}</span>
 								</div>
 							</div>
 							<p class="mb-5">{{ post.body }}</p>
@@ -69,7 +69,7 @@
 							<aside id="sidebar">
 	
 								<section class="widget overflow-hidden mb-md-6 mb-3">
-									<h3 class="headingVII fwEbold text-uppercase mb-4">ARCHIVES</h3>
+									<h3 class="headingVII fwEbold text-uppercase mb-4">فهرست</h3>
 									<ul class="list-unstyled archiveList mb-0">
 										{% for post in newest_posts %}
 										<li class="mb-3"><a href="{% url 'blog:post' post.id %}" class="d-block">{{post.title}}</a></li>
@@ -78,12 +78,13 @@
 								</section>
 								<!-- widget -->
 								<section class="widget overflow-hidden mb-md-5 mb-3">
-									<h3 class="headingVII fwEbold text-uppercase mb-4">CATEGORIES</h3>
+									<h3 class="headingVII fwEbold text-uppercase mb-4">دسته‌ها</h3>
 									<ul class="list-unstyled archiveList mb-0">
-										<li class="mb-3"><a href="javascript:void(0);" class="d-block">Creative Ai</a></li>
-										<li class="mb-3"><a href="javascript:void(0);" class="d-block">Industry</a></li>
-										<li class="mb-3"><a href="javascript:void(0);" class="d-block">Data</a></li>
-										<li class="mb-3"><a href="javascript:void(0);" class="d-block">Machine Learning</a></li>
+										<li class="mb-3"><a href="javascript:void(0);" class="d-block">خلاقانه</a></li>
+										<li class="mb-3"><a href="javascript:void(0);" class="d-block">عکس</a></li>
+										<li class="mb-3"><a href="javascript:void(0);" class="d-block">صنعت</a></li>
+										<li class="mb-3"><a href="javascript:void(0);" class="d-block">بینایی ماشین</a></li>
+										<li class="mb-3"><a href="javascript:void(0);" class="d-block">ویدیو</a></li>
 									</ul>
 								</section>
 	
@@ -107,7 +108,7 @@
 					<div class="col-12 border-bottom">
 						<!-- commentsBlock -->
 						<div class="commentsBlock overflow-hidden mb-2">
-							<h4 class="headingVII text-uppercase mb-5">{{ post.comment_counter }} COMMENTS</h4>
+							<h4 class="headingVII text-uppercase mb-5">{{ post.comment_counter }} دیدگاه ها</h4>
 							<!-- commentArea -->
 
 
@@ -165,15 +166,15 @@
 					<div class="col-12">
 						<!-- commentFormArea -->
 						<div class="commentFormArea">
-							<h2 class="headingVII text-uppercase mb-5">Leave A Comment</h2>
+							<h2 class="headingVII text-uppercase mb-5">دیدگاه خود را بنویسید</h2>
 							<form class="commentform" method="post" novalidate>
-								<div class="d-flex flex-wrap row1 mb-md-5">
+								<div class="d-flex flex-wrap row1 mb-md-5" style="direction: rtl;">
 									<div class="form-group coll mb-5">
 										{% csrf_token %}
 										{{ form }}
 									</div>
 								</div>
-								<button type="submit" class="btn btnTheme btnShop md-round fwEbold text-white py-3 px-4 py-md-3 px-md-4">Post Now <i class="fas fa-arrow-right ml-2"></i></button>
+								<button type="submit" class="btn btnTheme btnShop md-round fwEbold text-white py-3 px-4 py-md-3 px-md-4">ارسال نظر</button>
 							</form>
 						</div>
 					</div>
@@ -188,23 +189,17 @@
 				<!-- subscribeSecBlock -->
 				<section class="subscribeSecBlock bgCover col-12 pt-lg-24 pb-lg-12 pt-md-16 pb-md-8 py-10" style="background-image: url({% static 'images/sd.png' %})">
 					<header class="col-12 mainHeader mb-9 text-center">
-						<h1 class="headingIV playfair fwEblod mb-4">Send Us a Message</h1>
-						<p class="mb-6">Send Us a Message and we'll call you for Free Consulation :)</p>
+					  <h1 class="headingIV playfair fwEblod mb-4">با ما در ارتباط باشید</h1>
+					  <p class="mb-6">برای مشاوره رایگان با ما تماس بگیرید</p>
 					</header>
-					{% comment %} <form class="emailForm1 mx-auto overflow-hidden d-flex flex-wrap">
-						<input type="email" class="form-control px-4 border-0" placeholder="Enter your mail...">
-						<button type="submit" class="btn btnTheme btnShop fwEbold text-white py-3 px-4 py-md-3 px-md-4">Submit<i class="fas fa-arrow-right ml-2"></i></button>
-					</form> {% endcomment %}
-					
+					<form action="" method="post" novalidate class="mess row d-flex justify-content-center" style="direction: rtl;">
+			
+					  {% csrf_token %}
+					  {{ message_form }}
+					  <button type="submit" class="mess btn btnTheme btnShop md-round fwEbold text-white py-3 px-4 py-md-3 px-md-4 mr-5">ارسال پیام<i class="fas fa-arrow-left mr-2"></i></button>
 
-					<form action="" method="post" novalidate class="mess row d-flex justify-content-center">
-				
-						{% csrf_token %}
-						{{ message_form }}
-						<button type="submit" class="mess btn btnTheme btnShop md-round fwEbold text-white py-3 px-4 py-md-3 px-md-4 ml-5">Post Now <i class="fas fa-arrow-right ml-2"></i></button>
 					</form>
-
-				</section>
+				  </section>
 			</div>
 		</main>
 	</div>

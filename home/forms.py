@@ -16,6 +16,7 @@ class MessageForm(forms.ModelForm):
             # 'name' : forms.TextInput(attrs={'class':'form-control', 'placeholder':'enter your name',}),
             # 'phone' : forms.TextInput(attrs={'class':'form-control', 'placeholder':'enter phone number',}),
             # 'email' : forms.TextInput(attrs={'class':'form-control', 'placeholder':'enter phone email',}),
-            'message' : forms.TextInput(attrs={'class':'form emailForm1 mx-auto d-flex flex-wrap pl-5 mr-5', 'placeholder':'...Enter your message...',}),
+            'message' : forms.TextInput(attrs={'class':'form emailForm1 d-flex flex-wrap pr-5 mr-5', 'placeholder':'...Enter your message...',
+                                               'style':'direction:rtl;'}),
         }
 

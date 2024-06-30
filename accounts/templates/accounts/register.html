@@ -11,7 +11,7 @@
       border-radius: 5px;
     }
     .card-body {
-      width: 200px;
+
       margin: 0 auto 0 30px;
     }
     .col-md-4 {
@@ -26,15 +26,15 @@
     }
   </style>
 
-  <div class="col-md-4 d-flex">
+  <div class="col-md-4 d-flex" style="direction: ltr;">
     <div class="card flex-grow-1 mb-md-0">
       <div class="card-body">
-        <h3 class="card-title">Register</h3>
+        <h3 class="card-title">ثبت نام</h3>
         <div class="form-group">
-          <form action="" method="post" novalidate>
+          <form action="" method="post" novalidate style="direction: rtl;">
             {% csrf_token %}
             {{ form }}
-            <input type="submit" value="register" class="btn btn-primary mt-4" />
+            <input type="submit" value="ثبت نام" class="btn btn-primary mt-4" />
           </form>
         </div>
       </div>

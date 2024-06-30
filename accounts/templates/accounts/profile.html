@@ -33,7 +33,7 @@
 
 
 <div class="container rounded-lg bg-white mt-5 mb-5 ml-10">
-    <form class="row" action="" method="post" novalidate enctype='multipart/form-data'>
+    <form class="row" action="" method="post" novalidate enctype='multipart/form-data' style="direction: rtl;">
         {% csrf_token %}
 
         <div class="col-md-3 border-right main-img">
@@ -45,38 +45,38 @@
             <div class="d-flex flex-column align-items-center text-center p-3 py-5">
                 <img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"></div>
             {% endif %}
-            <div name ="prof_img" class="col-md-12"><label class="labels">Profile Image</label>{{form.image}}</div>
+            <div name ="prof_img" class="col-md-12"><label class="labels">تصویر پروفایل</label>{{form.image}}</div>
 
         </div>
         <div class="col-md-5 border-right">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Profile Info:</h4>
+                    <h4 class="text-right">اطلاعات شخصی:</h4>
                 </div>
 
                 <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">First name</label>{{form.first_name}}</div>
-                    <div class="col-md-12"><label class="labels">Last name</label>{{form.last_name}}</div>
-                    <div class="col-md-12"><label class="labels">Username</label>{{form.username}}</div>
-                    <div class="col-md-12"><label class="labels">Email</label>{{form.email}}</div>
-                    <div class="col-md-12"><label class="labels">Mobile Number</label>{{form.phone}}</div>
+                    <div class="col-md-12"><label class="labels">نام</label>{{form.first_name}}</div>
+                    <div class="col-md-12"><label class="labels">نام خانوادگی</label>{{form.last_name}}</div>
+                    <div class="col-md-12"><label class="labels">نام کاربری</label>{{form.username}}</div>
+                    <div class="col-md-12"><label class="labels">ایمیل</label>{{form.email}}</div>
+                    <div class="col-md-12"><label class="labels">شماره تماس</label>{{form.phone}}</div>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Address datailes (custem):</h4>
+                    <h4 class="text-right">نشانی (دلخواه):</h4>
                 </div>                
                 <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Address Line 1</label>{{form.address1}}</div>
-                    <div class="col-md-12"><label class="labels">Address Line 2</label>{{form.address2}}</div>
-                    <div class="col-md-12"><label class="labels">Postcode</label>{{form.postal_code}}</div>
-                    <div class="col-md-12"><label class="labels">State</label>{{form.state}}</div>
-                    <div class="col-md-12"><label class="labels">Area</label>{{form.area}}</div>
+                    <div class="col-md-12"><label class="labels">بخش اول نشانی</label>{{form.address1}}</div>
+                    <div class="col-md-12"><label class="labels">بخش دوم نشانی</label>{{form.address2}}</div>
+                    <div class="col-md-12"><label class="labels">کد پستی</label>{{form.postal_code}}</div>
+                    <div class="col-md-12"><label class="labels">پلاک</label>{{form.state}}</div>
+                    <div class="col-md-12"><label class="labels">واحد</label>{{form.area}}</div>
                 </div>
 
-                <div class="mt-5 text-center"><button class="btn btnTheme w-50 fwEbold text-center text-white md-round py-3 px-4 py-md-3 px-md-4 float-right" type="submit">Save Profile</button></div>
+                <div class="mt-5 text-center"><button class="btn btnTheme w-50 fwEbold text-center text-white md-round py-3 px-4 py-md-3 px-md-4 float-right" type="submit">ذخیره اطلاعات</button></div>
             </div>
         </div>
     </form>

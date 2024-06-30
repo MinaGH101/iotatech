@@ -31,6 +31,7 @@ class ShopDetailView(View):
     def get(self, request, product_id):
         form = self.form_class()
         product = Product.objects.get(id=product_id)
+        projects = Project.objects.filter(cat=product.category)
         related_products = Product.objects.filter(category = product.category)
         
         # if request.user.is_authenticated:
@@ -44,6 +45,6 @@ class ShopDetailView(View):
         #     cart, created = Cart.objects.get_or_create(customer=user)
         #     items = cart.items.all()
         #     item = items.filter(product=product)
-        return render(request, 'shop/shop-detail.html', {'product':product, 
+        return render(request, 'shop/shop-detail.html', {'product':product, 'projects':projects,
                                                          'related_products':related_products, 'form':form})
   

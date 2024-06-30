@@ -7,9 +7,9 @@ class UserCommentForm(forms.ModelForm):
         fields = ('body','name', 'email',)
         
         widgets = {
-            'body' : forms.Textarea(attrs={'class':'form-control', 'placeholder':'comment', 'style': 'width: 200%;'}),
+            'body' : forms.Textarea(attrs={'class':'form-control', 'placeholder':'دیدگاه', 'style': 'width: 200%;'}),
             'name' : forms.TextInput(attrs={'class':'form-control'}),
-            'email' : forms.TextInput(attrs={'class':'form-control', 'placeholder':'enter your email...'}),
+            'email' : forms.TextInput(attrs={'class':'form-control', 'placeholder':'ایمیل خود را وارد کنید...'}),
         }
         
         
@@ -19,6 +19,6 @@ class UserReplyCommentForm(forms.ModelForm):
         fields = ('body','name',)
         
         widgets = {
-            'body' : forms.Textarea(attrs={'class':'form-control', 'placeholder':'comment', 'style': 'height: 70px'}),
+            'body' : forms.Textarea(attrs={'class':'form-control', 'placeholder':'پاسخ دیدگاه', 'style': 'height: 70px'}),
             'name' : forms.TextInput(attrs={'class':'form-control'}),
         }

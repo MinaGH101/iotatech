@@ -9,7 +9,7 @@ class Post(models.Model):
     img2 = models.FileField(upload_to='images', default=None, blank=True, null=True)
     body2 = models.TextField(default=None, blank=True, null=True)
     img3 = models.FileField(upload_to='images', default=None, blank=True, null=True)
-    body2 = models.TextField(default=None, blank=True, null=True)
+    body3 = models.TextField(default=None, blank=True, null=True)
     audio = models.FileField(upload_to='images', default=None, blank=True, null=True)
     video = models.FileField(upload_to='images', default=None, blank=True, null=True)
     writer = models.CharField(max_length=100, default=None)

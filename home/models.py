@@ -9,6 +9,6 @@ class Message(models.Model):
     # phone_regex = RegexValidator(regex=r'^\+?98?\d{9,15}$', message="Example: +9121234567")
     # phone = models.CharField(validators=[phone_regex], max_length=17, blank=True, null=True, default='Enter Your Phone Number ...')
     user = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True, related_name='user_cart')
-    message = models.TextField(blank=False, null=True, default='...Enter Your Message ...')
+    message = models.TextField(blank=False, null=True, default='...پیام خود را وارد کنید ...')
     created = models.DateTimeField(auto_now=True)
     

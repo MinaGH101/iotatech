@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import *
 
+
 @admin.register(Product)
 class PostAdmin(admin.ModelAdmin):      
     list_display = ('id', 'title', 'category')
@@ -15,9 +16,9 @@ class PostAdmin(admin.ModelAdmin):
     list_filter = ('created',)
     
     
-# @admin.register(Seller)
-# class PostAdmin(admin.ModelAdmin):      
-#     list_display = ('id', 'product', 'seller')
+@admin.register(Category)
+class PostAdmin(admin.ModelAdmin):      
+    list_display = ('id', 'name')
 
 # @admin.register(Promo)
 # class PostAdmin(admin.ModelAdmin):      

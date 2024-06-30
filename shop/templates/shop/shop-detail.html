@@ -18,11 +18,11 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
-							<h1 class="headingIV fwEbold playfair mb-4">Our Serivces</h1>
+							<h1 class="headingIV fwEbold playfair mb-4">خدمات یوتا</h1>
 							<ul class="list-unstyled breadCrumbs d-flex justify-content-center">
-								<li class="mr-2"><a href="{% url 'home:home' %}">Home</a></li>
+								<li class="mr-2"><a href="{% url 'home:home' %}">خانه</a></li>
 								<li class="mr-2">/</li>
-								<li class="mr-2"><a href="{% url 'home:home' %}#services">Services</a></li>
+								<li class="mr-2"><a href="{% url 'home:home' %}#services">خدمات یوتا</a></li>
 								<li class="mr-2">/</li>
 								<li class="active">{{ product.title }}</li>
 							</ul>
@@ -49,12 +49,15 @@
 					</div>
 					<div class="col-12 col-lg-6 order-lg-3">
 						<!-- productTextHolder -->
-						<div class="productTextHolder overflow-hidden">
-							<h2 class="fwEbold mb-2">{{ product.title }}</h2>
-							<p class="mb-5">{{ product.description }}</p>
+						<div class="productTextHolder overflow-hidden" style="direction: rtl; text-align: justify; text-justify: inter-word;">
+							<h2 class="fwEbold mb-7">{{ product.title }}</h2>
+							<p class="mb-7">{{ product.description }}</p>
+							<p class="mb-10">{{ product.description2 }}</p>
 								<div class="holder overflow-hidden d-flex flex-wrap mb-6">
-									<input type="submit" class="btn btnTheme btnShop fwEbold text-white md-round py-3 px-4 py-md-3 px-md-4" value="More Info">
-								</div>
+									<a
+									href="{% url 'home:contact' %}"
+									class="btn btnTheme btnShop fwEbold text-white md-round py-3 px-4"
+									>اطلاعات بیشتر</a>								</div>
 							  </form>
 						</div>
 					</div>
@@ -62,14 +65,41 @@
 
 			</div>
 
-			<section class="featureSec container overflow-hidden pt-xl-12 pb-xl-29 pt-lg-10 pb-lg-14 pt-md-8 pb-md-10 py-5">
-				<div class="row">
-					<!-- mainHeader -->
-					<header class="col-12 mainHeader mb-5 text-center">
-						<h1 class="headingIV playfair fwEblod mb-4">Related products</h1>
-					</header>
+			<section
+			class="featureSec container overflow-hidden pt-xl-12 pb-xl-9 pt-lg-10 pb-lg-4 pt-md-8 pb-md-2 pt-5"
+		  >
+			<div class="row">
+			  <!-- mainHeader -->
+			  <header class="col-12 mainHeader mb-4 text-center" id='services'>
+				 <span class="headingIV2 text-break d-block">پروژه‌های مرتبط</span>
+			  </header>
+			</div>
+			<div class="row" style="justify-items: center; justify-content:center;">
+			  {% for project in projects %}
+			  <div class="col-12 col-sm-6 col-lg-3 featureCol position-relative mb-6">
+				<div class="border">
+				  <div class="imgHolder position-relative w-100 overflow-hidden">
+					{% if product.img %}
+					<img
+					  src="{{ project.img_projURL }}"
+					  alt="image description"
+					  class="img-fluid w-100"
+					  style="height: 250px; object-fit: scale-down"
+					/>
+					{% endif %}
+				  </div>
+				  <div class="text-center py-xl-5 py-sm-4 py-2 px-xl-2 px-1">
+					<span class="price title d-block mb-2 fwEbold"
+					  ><a href="{% url 'shop:project-detail' project.id %}">{{ project.title }}</a></span
+					>
+					<span class="d-block"><a href="{% url 'shop:project-detail' project.id %}"></a></span>
+				  </div>
 				</div>
-			</section>
+			  </div>
+			  {% endfor %}
+			</div>
+	  
+		  </section>
 
 			
 	</div>

@@ -5,28 +5,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-4">
-                    <a href="javascript:void(0);" class="tel d-flex align-items-end"><i class="icon-call mr-2"></i>  Hotline: +98 0921 - 5723628</a>
+                    <a href="javascript:void(0);" class="tel d-flex align-items-end"><i class="icon-call mr-2"></i>  تماس: +98 0921 - 5723628</a>
                 </div>
                 <div class="col-12 col-sm-4 text-center">
-                    <span class="txt d-block">Wellcome To IOTA Tech</span>
+                    <span class="txt d-block">به گروه فناوری یوتا خوش آمدید</span>
                 </div>
                 <div class="col-12 col-sm-4">
                     <!-- langListII -->
                     <ul class="nav nav-tabs langListII justify-content-end border-bottom-0">
                         <li class="dropdown">
-                            <span>Mode: </span>
-                            <a class="d-inline dropdown-toggle text-uppercase" data-toggle="dropdown" href="javascript:void(0);" role="button" aria-haspopup="true" aria-expanded="false">Light</a>
+                            <span>روشنایی: </span>
+                            <a class="d-inline dropdown-toggle text-uppercase" data-toggle="dropdown" href="javascript:void(0);" role="button" aria-haspopup="true" aria-expanded="false">روشن</a>
                             <div class="dropdown-menu text-uppercase pl-4 pr-4 border-0">
-                                <a class="dropdown-item" href="javascript:void(0);">Light</a>
+                                <a class="dropdown-item" href="javascript:void(0);">روشن</a>
                                 {% comment %} <a class="dropdown-item" href="javascript:void(0);">Dark</a> {% endcomment %}
                             </div>
                         </li>
                         <li class="dropdown m-0">
-                            <span>Languages: </span>
-                            <a class="d-inline dropdown-toggle text-uppercase" data-toggle="dropdown" href="javascript:void(0);" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
+                            <span>زبان: </span>
+                            <a class="d-inline dropdown-toggle text-uppercase" data-toggle="dropdown" href="javascript:void(0);" role="button" aria-haspopup="true" aria-expanded="false">Fa</a>
                             <div class="dropdown-menu pl-4 pr-4">
-                                <a class="dropdown-item" href="javascript:void(0);">English</a>
-                                {% comment %} <a class="dropdown-item" href="javascript:void(0);">Farsi</a> {% endcomment %}
+                                <a class="dropdown-item" href="javascript:void(0);">EN</a>
+                                <a class="dropdown-item" href="javascript:void(0);">Fa</a>
                             </div>
                         </li>
                     </ul>
@@ -54,31 +54,31 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
+                        <div class="collapse navbar-collapse" id="navbarNav" style="direction: rtl;">
                             <ul class="navbar-nav mx-auto text-uppercase d-inline-block">
                                 <li class="nav-item active dropdown">
-                                    <a href="{% url 'home:home' %}" class="dropdown-toggle d-block">home</a>
+                                    <a href="{% url 'home:home' %}" class="dropdown-toggle d-block">خانه</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a href="{% url 'home:home' %}#services" class="dropdown-toggle d-block">Services</a>
+                                    <a href="{% url 'home:home' %}#services" class="dropdown-toggle d-block">خدمات</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a href="{% url 'home:home' %}#projects" class="dropdown-toggle d-block">Projects</a>
+                                    <a href="{% url 'home:home' %}#projects" class="dropdown-toggle d-block">پروژه ها</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="dropdown-toggle d-block" href="{% url 'blog:blog' %}">Papers</a>
+                                    <a class="dropdown-toggle d-block" href="{% url 'blog:blog' %}">مقالات</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="d-block" href="{% url 'home:about' %}">About</a>
+                                    <a class="d-block" href="{% url 'home:about' %}">درباره ما</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="d-block" href="{% url 'home:contact' %}">contact</a>
+                                    <a class="d-block" href="{% url 'home:contact' %}">تماس با ما</a>
                                 </li>
                                 <li class="nav-item" style="margin: 0 0 0 0px">
                                     {% if request.user.is_authenticated %}
-                                    <a class="d-block" href="{% url 'accounts:logout' %}">logout</a>
+                                    <a class="d-block" href="{% url 'accounts:logout' %}">خروج</a>
                                     {% else %}
-                                    <a class="d-block" href="{% url 'accounts:login' %}">log/sign in</a>
+                                    <a class="d-block" href="{% url 'accounts:login' %}">ورود</a>
                                     {% endif %}
                                 </li>
                             </ul>

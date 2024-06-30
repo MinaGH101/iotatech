@@ -9,24 +9,23 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
-							<h1 class="headingIV fwEbold playfair mb-4">About Us</h1>
+							<h1 class="headingIV fwEbold playfair mb-4">درباره یوتا</h1>
 							<ul class="list-unstyled breadCrumbs d-flex justify-content-center">
-								<li class="mr-2"><a href="{% url 'home:home' %}">Home</a></li>
+								<li class="mr-2"><a href="{% url 'home:home' %}">خانه</a></li>
 								<li class="mr-2">/</li>
-								<li class="active">About</li>
+								<li class="active">درباره یوتا</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="abtSecHolder container pt-xl-24 pb-xl-12 pt-lg-20 pb-lg-10 pt-md-16 pb-md-8 pt-10 pb-5">
+			<section class="abtSecHolder container pt-xl-24 pb-xl-12 pt-lg-20 pb-lg-10 pt-md-16 pb-md-8 pt-10 pb-5" style="direction: rtl;">
 				<div class="row">
-					<div class="col-12 col-lg-6 pt-xl-12 pt-lg-8">
+					<div class="col-12 col-lg-6 pt-xl-12 pt-lg-8" style="direction: rtl;">
 						<h2 class="playfair fwEbold position-relative mb-7 pb-5">
-							<strong class="d-block">IOTA</strong>
-							<strong class="d-block">Technology</strong>
+							<strong class="d-block"> فناوری یوتا</strong>
 						</h2>
-						<p class="pr-xl-16 pr-lg-10 mb-lg-0 mb-6">IOTA Ai Group started in 2019 with the aim of developing and applying artificial intelligence in the industry. This group, which consists of artificial intelligence specialists, material and metallurgical, chemical, and software engineers, aims to provide and implement solutions to industrial challenges with the help of artificial intelligence tools.</p>
+						<p class="pr-xl-16 pr-lg-10 mb-lg-0 mb-6" style="text-align: justify; text-justify: inter-word;">گروه هوش مصنوعی یوتا با هدف توسعه‌ و بکارگیری هوش مصنوعی در صنعت، از سال 1399 کار خود را آغاز کرد. این گروه که متشکل از متخصصان هوش مصنوعی، مهندسان مواد و متالورژی، شیمی و نرم‌افزار است، با هدف ارائه و پیاده‌سازی راهکار چالش‌های صنعتی به کمک ابزار هوش مصنوعی به فعالیت می‌پردازد.</p>
 					</div>
 					<div class="col-12 col-lg-6">
 						<img src="{% static 'images/img80.jpg' %}" alt="image description" class="img-fluid">
@@ -34,7 +33,7 @@
 				</div>
 			</section>
 			<section class="counterSec container pt-xl-12 pb-xl-24 pt-lg-10 pb-lg-20 pt-md-8 pb-md-16 pt-5 pb-10">
-				<div class="row">
+				<div class="row" style="direction: rtl;">
 					<div class="col-12">
 						<!-- progressCounter -->
 						<ul class="progressCounter list-unstyled mb-2 d-flex flex-wrap text-capitalize text-center">
@@ -58,7 +57,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="introSec bg-lightGray pt-xl-12 pb-xl-7 pt-10 pb-10">
+			<section class="introSec bg-lightGray pt-xl-12 pb-xl-7 pt-10 pb-10" style="direction: rtl;">
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-lg-6 mb-lg-0 mb-6">
@@ -234,18 +233,19 @@
 			</section> {% endcomment %}
 			<div class="container-fluid px-xl-20 mb-xl-24 mb-lg-20 mb-md-16 mb-10">
 				<!-- subscribeSecBlock -->
-				<section class="subscribeSecBlock bgCover pt-xl-24 pb-xl-12 pt-lg-20 pb-lg-10 pt-md-16 pb-md-10 py-10 px-3" style="background-image: url({% static 'images/sd.png' %})">
+				<section class="subscribeSecBlock bgCover col-12 pt-lg-24 pb-lg-12 pt-md-16 pb-md-8 py-10" style="background-image: url({% static 'images/sd.png' %})">
 					<header class="col-12 mainHeader mb-9 text-center">
-						<h1 class="headingIV playfair fwEblod mb-4">Send Us a Message</h1>
-						<p class="mb-6">Send Us a Message and we'll call you :)</p>
+					  <h1 class="headingIV playfair fwEblod mb-4">با ما در ارتباط باشید</h1>
+					  <p class="mb-6">برای مشاوره رایگان با ما تماس بگیرید</p>
 					</header>
-					<form action="" method="post" novalidate class="mess form row d-flex justify-content-center">
-				
-						{% csrf_token %}
-						{{ message_form }}
-						<button type="submit" class="mess btn btnTheme btnShop md-round fwEbold text-white py-3 px-4 py-md-3 px-md-4 ml-5">Post Now <i class="fas fa-arrow-right ml-2"></i></button>
+					<form action="" method="post" novalidate class="mess row d-flex justify-content-center" style="direction: rtl;">
+			
+					  {% csrf_token %}
+					  {{ message_form }}
+					  <button type="submit" class="mess btn btnTheme btnShop md-round fwEbold text-white py-3 px-4 py-md-3 px-md-4 mr-5">ارسال پیام<i class="fas fa-arrow-left mr-2"></i></button>
+
 					</form>
-				</section>
+				  </section>
 			</div>
 		</main>
 

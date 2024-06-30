@@ -18,11 +18,11 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 pt-lg-23 pt-md-15 pt-sm-10 pt-6 text-center">
-							<h1 class="headingIV fwEbold playfair mb-4">Our Projects</h1>
+							<h1 class="headingIV fwEbold playfair mb-4">پروژه های یوتا</h1>
 							<ul class="list-unstyled breadCrumbs d-flex justify-content-center">
-								<li class="mr-2"><a href="{% url 'home:home' %}">Home</a></li>
+								<li class="mr-2"><a href="{% url 'home:home' %}">خانه</a></li>
 								<li class="mr-2">/</li>
-								<li class="mr-2"><a href="{% url 'home:home' %}#projects">Projects</a></li>
+								<li class="mr-2"><a href="{% url 'home:home' %}#projects">پروژه ها</a></li>
 								<li class="mr-2">/</li>
 								<li class="active">{{ project.title }}</li>
 							</ul>
@@ -44,14 +44,13 @@
 					</div>
 					<div class="col-12 col-lg-6 order-lg-3">
 						<!-- productTextHolder -->
-						<div class="productTextHolder overflow-hidden">
-							<h2 class="fwEbold mb-2">{{ project.title }}</h2>
+						<div class="productTextHolder overflow-hidden" style="font-size:16px; direction: rtl; text-align: justify; text-justify: inter-word;">
+							<h2 class="fwEbold mb-5">{{ project.title }}</h2>
 							<p class="mb-5">{{ project.description }}</p>
 								<a
 								href="{% url 'home:contact' %}"
 								class="btn btnTheme btnShop fwEbold text-white md-round py-3 px-4"
-								>More Info<i class="fas fa-arrow-right ml-2"></i
-							  ></a>
+								>اطلاعات بیشتر</a>
 							  </form>
 						</div>
 					</div>
