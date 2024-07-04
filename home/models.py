@@ -2,7 +2,6 @@ from django.db import models
 from django.core.validators import RegexValidator
 from django.contrib.auth.models import User
 
-
 class Message(models.Model):
     # name = models.CharField(max_length=50, blank=True, null=True, default='Enter Your First & Last name ...')
     # email = models.EmailField(max_length=100, blank=True, null=True, default='Enter Your Email ...')

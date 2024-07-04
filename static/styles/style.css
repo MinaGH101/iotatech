@@ -64,6 +64,12 @@ Theme URI: http://www.htmlbeans.com/html/botanical/
 46	 contactForm
 
 ---------------------------------------------------------*/
+@font-face {
+  font-family: 'Estedad';
+  src: local('Estedad'),
+       url('../static/fonts/Estedad.ttf') format("truetype");
+}
+
 html {
   background-color: #3676b6;
   scroll-behavior: smooth;
